@@ -1,0 +1,24 @@
+ALGORITHM task1
+VAR
+    s:STRING;
+    counter1:INTEGER:=0;
+    counter2:INTEGER:=1;
+    counter3:INTEGER:=0;
+    i:INTEGER:=0;
+BEGIN
+    read(s)
+    FOR i FROM 0 TO s.length STEP 1  DO
+        IF (s[i]!=" ") THEN
+            counter1+=1
+        ELSE_IF (s[i]=" ") THEN
+            counter2+=1
+        END_IF
+        IF (s[i]="a" or "A" or "o" or "O"
+        or "i" or "I" or "e" or "E" or "u" or "U" or "y" or "Y") THEN
+            counter3+=1
+        END_IF
+    END_FOR
+    write("there is",counter1,"letters in",s)
+    write("there is",counter2,"words in",s)
+    write("there is",counter3,"vowels in",s)
+END

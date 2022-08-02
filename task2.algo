@@ -1,0 +1,24 @@
+ALGORITHM task2
+VAR
+    s:ARRAY;
+    r:ARRAY;
+    i:INTEGER:=0;
+    j:INTEGER:=0;
+    sl:INTEGER:=0;
+    sn:INTEGER:=0;
+    sm:INTEGER:=0;
+BEGIN
+    read(s)
+    read(r)
+    FOR i FROM 0 TO max STEP 1  DO
+    FOR j FROM 0 TO max STEP 1  DO
+        IF (s[i]!=r[j]) THEN
+            sl=s[i]
+        END_IF
+        IF (r[j]!=s[i]) THEN
+            sn=r[j]
+        END_IF
+    END_FOR
+    END_FOR
+    sm=sl+sn
+END
